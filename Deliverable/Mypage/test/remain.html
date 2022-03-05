@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Surijaya Blog<</title>
+</head>
+<body>
+    <header class="header">
+        <div class="site">
+            <img src="img/page_name.png" alt="header image">
+        </div>
+    
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#main">ブログ一覧</a></li>
+                <li><a href="#info">お問い合わせ</a></li>
+        </nav>
+    
+        <button type="button" class="nav-button" onClick="navFunc()">
+            <span class="sr-only">MENU</span>
+        </button>
+    </header>
+    <div class="hero" id="home">
+        <h1>
+            <img src="img/nekonote.png" alt="neko'shand">
+        </h1>
+    </div>
+    <article class="main container">
+        <div class="title">
+            <h2>ブログ一覧</h2>
+        </div>
+        <div  class="objects">
+            <section class="item">
+                <div class="text">
+                    <form action="list.php" method="post" name="form_1">
+                        <input type="hidden" name="contents" value="1">
+                        <a href="javascript:document.form_1.submit()">
+                            <h3>誰得？トーナメント作成を自動化</h3>
+                            <p>Excelマクロで簡単にトーナメントを作れます。</p>
+                            <p>※完成版のファイルあります。</p>
+                        </a>
+                    </form>
+                </div>
+                <div class="photo">
+                    <figure class="fig1"><img src="img/excel.png" alt="icon"></figure>
+                </div>
+            </section>
+            <section class="item dustbox">
+                <div class="text">
+                    <form action="list.php" method="post" name="form_2">
+                        <input type="hidden" name="contents" value="2">
+                        <a href="javascript:document.form_2.submit()">
+                            <h3>読了図書ライブラリ</h3>
+                            <p>過去に読んだ図書をpdfにまとめたもの。</p>
+                        </a>
+                    </form>
+                </div>
+                <div class="photo">
+                    <figure class="fig1"><img src="img/excel.png" alt="icon"></figure>
+                </div>
+            </section>
+            <section class="item invest">
+                <div class="text">
+                    <form action="list.php" method="post" name="form_3">
+                        <input type="hidden" name="contents" value="3">
+                        <a href="javascript:document.form_3.submit()">
+                            <h3>訳がわからない株式投資</h3>
+                            <p>理系学生が独学で日本株の勉強しても儲かるのか？</p>
+                        </a>
+                    </form>
+                </div>
+                <div class="photo">
+                    <figure class="fig1"><img src="img/excel.png" alt="icon"></figure>
+                </div>
+            </section>
+            
+        </div>
+    </article>
+    <aside class="info container" id="info">
+        <div class="title">
+            <h2>お問い合わせ</h2>
+        </div>
+        <div class="text">
+            <h3>スリジャ屋</h3>
+            <p class="address">
+                email: surija.tton@gmail.com
+            </p>
+        </div>
+        
+        <ul class="sns">
+            <li><a href="#"><img src="img/logo-twitter.svg" alt="Twitter"></a></li>
+            <li><a href="#"><img src="img/logo-facebook.svg" alt="Facebook"></a></li>
+            <li><a href="#"><img src="img/logo-instagram.svg" alt="Instagram"></a></li>
+        </ul>
+    </aside>
+    <footer class="footer">
+        COPYRIGHT © REIYA OKADA
+    </footer>
+    
+    <script>
+        function navFunc() {
+            document.querySelector('html').classList.toggle('open');
+        }
+    </script>
+    <script>
+        if( !document.currentScript ){
+            var ie1 = document.createElement( 'script' );
+            ie1.src = 'ie/css-var-polyfill.js';
+            document.head.appendChild( ie1 );
+        
+            var ie2 = document.createElement( 'script' );
+            ie2.src = 'ie/ofi.min.js';
+            document.head.appendChild( ie2 );
+        
+            var ie3 = document.createElement( 'script' );
+            var ie3Text = document.createTextNode( 'window.onload=function(){objectFitImages();}' );
+            ie3.appendChild( ie3Text );
+            document.head.appendChild( ie3 );
+        
+            var ie4 = document.createElement( 'style' );
+            var ie4Text = document.createTextNode( 'img {font-family: "object-fit: cover";}' );
+            ie4.appendChild( ie4Text );
+            document.head.appendChild( ie4 );
+        }
+    </script>
+</body>
+</html>
